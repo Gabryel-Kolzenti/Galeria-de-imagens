@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"> <!-- Define quais caracteres poderão ser utilizados dentro do site-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>enciclopédia Universal</title>
+</head>
+
+<body>
+
+    <div>    
+
+        <img class="miniPlanetas" src="img/Sol.jpg" alt="">
+        <img class="miniPlanetas" src="img/mercurio.png" alt="">
+        <img class="miniPlanetas" src="img/venus.jpg" alt="">
+        <img class="miniPlanetas" src="img/Terra.png" alt="">
+        <img class="miniPlanetas" src="img/Marte.png" alt="">
+        <img class="miniPlanetas" src="img/jupiter.png" alt="">
+        <img class="miniPlanetas" src="img/saturno.png" alt="">
+        <img class="miniPlanetas" src="img/uranos.jpg" alt="">
+        <img class="miniPlanetas" src="img/netuno.jpg" alt="">
+    
+    </div>
+    
+    <header class="main-header">
+
+        <h1>Enciclopédia <span>Universal</span> </h1> <!--<span/> usamos para encapsular pates de texto (destacar para poder formatar apenas aquela parte)-->
+       
+        <p>
+            A astronomia é a ciência mais antiga do mundo. Ela investiga os corpos celestes em sua estrutura, formação e ciclo de vida, além dos fenômenos que acontecem no Universo. Saiba mais sobre os corpos celestes do nossos sistema solar.
+        </p>
+
+    </header>
+    
+    <main class="container">
+
+        <section class="card" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+         <img class="terra" src="img/Terra.png" alt=""> 
+
+            <div> <!-- Tag generica-->
+                <h3 style="color: rgb(35, 83, 214);">Terra</h3>
+                <p>Gravidade: 9,807 m/s²
+                    <br>Distância do Sol: 149.600.000 km
+                    <br>Duração do dia: 23h 56m
+                    <br>Período orbital: 365 dias
+                </p>
+                <a href="https://brasilescola.uol.com.br/geografia/o-planeta-terra.htm#:~:text=A%20Terra%20%C3%A9%20considerada%20um,a%20exist%C3%AAncia%20de%20vida%20aqui." class="btn">Saiba Mais</a>
+            </div>
+        </section>     
+        
+        <section class="card" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+            <img class="MS" src="./img/Marte.png"; alt=""> 
+            
+         <div>
+                <h3 style="color: rgb(196, 39, 39);">Marte</h3>
+                <p>Gravidade: 3,71 m/s²
+                    <br>Distância do Sol: 227.900.000 km
+                    <br>Duração do dia: 1d 0h 37m
+                    <br>Período orbital: 687 dias
+                </p>
+                <a href="https://pt.wikipedia.org/wiki/Marte_(planeta)#:~:text=Marte%20%C3%A9%20o%20quarto%20planeta,lhe%20d%C3%A1%20uma%20apar%C3%AAncia%20avermelhada." class="btn">Saiba Mais</a>
+            </div>
+        </section>
+
+        <section class="card" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+            <img class="Jupiter" src="img/jupiter.png" alt="">
+            
+            <div>
+                <h3 style="color: rgb(196, 166, 122);">Jupiter</h3>
+                <p>Gravidade: 24,79 m/s²
+                    <br>Distância do Sol: 778.500.000 km
+                    <br>Duração do dia: 0d 9h 56m
+                    <br>Área da superfície: 6,142 × 10^10 km²
+ 
+                </p>
+                <a href="https://brasilescola.uol.com.br/geografia/jupiter.htm" class="btn">Saiba Mais</a>
+            </div>
+        </section>
+
+        <section class="card" data-aos="flip-left" data-aos-easing="ease-out-cubic"  data-aos-duration="2000">
+             <img class="MS" src ="./img/saturno.png";>
+
+            <div>
+                <h3 style="color: rgb(219, 167, 71);">Saturno</h3>
+                <p>Gravidade: 10,44 m/s²
+                    <br>Distância do Sol: 1,434 × 10^9 km
+                    <br>Área da superfície: 4,27 × 10^10 km²
+                    <br>Duração do dia: 0d 10h 34m
+                </p>
+                <a href="https://brasilescola.uol.com.br/geografia/saturno.htm#:~:text=Disp%C3%B5e%20de%207%20conjuntos%20de,maiores%20que%20as%20da%20Terra." class="btn">Saiba Mais</a>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="galeria">
+        <a href="https://pt.wikipedia.org/wiki/Sol" style="background-image: url(img/Sol.jpg);"></a>
+        <a href="https://pt.wikipedia.org/wiki/Lua" style="background-image: url(img/lua.jpg);"></a>
+        <a href="https://brasilescola.uol.com.br/geografia/netuno-2.htm" style="background-image: url(img/netuno.jpg);"></a>
+        <a href="https://pt.wikipedia.org/wiki/V%C3%A9nus_(planeta)" style="background-image: url(img/venus.jpg);"></a>
+        <a href="https://brasilescola.uol.com.br/geografia/urano-2.htm" style="background-image: url(img/uranos.jpg);"></a>
+    </div>
+
+    <footer><p>Desenvolvido por Gabryel Kolzenti &copy;</p></footer>
+
+    <script>
+        AOS.init();
+      </script>
+
+</body>
+</html>

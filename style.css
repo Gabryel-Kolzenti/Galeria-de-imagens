@@ -1,0 +1,153 @@
+@charset "utf-8"; /* Define quais caracteres poderão ser utilizados dentro do site */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(https://cdn.pixabay.com/photo/2015/09/29/15/12/stars-964022_1280.png)
+}
+
+a{
+    text-decoration: none;
+}
+
+ .main-header{
+    display: flex; /*tira do formato padrão e possibilita montar o site de forma mais dinâmica, devemos colocar este antes dos (flex-direction e align-items)*/
+    flex-direction: column; /*manterá o item (tag, class, id) em formato de coluna, linha, coluna invertida e linha unvertida*/
+    align-items: center; /*irá posicionar o item dentro da regra de formato escolhido em flex-direction*/
+    justify-content: center;
+    text-align: center;
+    padding: 2em;
+} 
+
+.miniPlanetas {
+    display: inline;
+    margin-top: 2%;
+    margin-left: 6%;
+    width: 3.4%;
+}
+
+.main-header h1{
+    font-size: 4em;
+    margin-bottom: 0.7em;
+    line-height: 1.2em;
+    color: #fff;
+}
+
+.main-header h1 span {
+    color: #da5332;
+}
+
+/*.main-header div .miniPlanetas{
+    display: flex;
+    flex-direction: row;
+    margin: 1% 1.5%;
+    max-width: 10%;
+}*/
+
+p, h3 {
+    color: #fff;
+    text-align: center;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    /*overflow: auto; /*Caso algo fique maior que a tela, o item em questão receberá uma rolagem própria*/
+    padding: 0 2em;
+}
+
+/*  EXEMPLO DE OVERFLOW: AUTO       (tire do formato "comentário" para ver)
+    img{
+        width: 2000px;
+        overflow: auto;
+    }                                               */
+
+.card img {
+    width: 80%;
+    margin: auto;
+    padding-left: 10%;
+    padding-top: 10%;
+    padding-bottom: 10%; 
+}
+
+.MS {
+    width: 100%;
+    padding-right: 10%;
+}
+
+.card {
+    display: grid; /*Deixa os elementos em formato de grade*/
+    grid-template-columns: repeat(2, 1fr); /* o formato defino em grade se organizará em colunas*/
+    /*repeat(x, yfr) x representa número de colunas e y representa o número de fração dos elementos que será utilizado*/
+    gap: 2em; /*Espaçamento entre elementos, somente quando usarmos "grid"*/
+    margin-bottom: 4em;
+    background: #000000;
+}
+
+.card h3 {
+    margin-bottom: 2em;
+}
+
+.card div {
+    padding: 2em;
+}
+
+/*.card:nth-child(1) Usado para selecionar filho especifico de cada class.   1(primeiro filho), 2(segundo filho)...*/
+/*.card:nth-child(even) Usado para selecionar filho de forma alternada.    ex: FILHO SIM, FILHO NÃO, FILHO SIM... */
+.card:nth-child(even) img {
+    order: 2; /*Irá trocar a ordem de exibição dos itens (dependerá da quantidade de colunas, para ter mais opões de order)*/
+}
+
+.btn {
+    background: #0e03a8;
+    color: #fff;
+    padding: 0.6em /*Vertical*/ 1.6em /*Horizontal*/;
+    margin-left: 28%;
+    margin-top: 2em;
+    display: inline-block; /*Para o item não se sobrepor a outros*/
+    /*cursor: grab;*/
+    border-radius: 12px;
+}
+
+.btn:hover{
+    background-color: rgb(0, 140, 255);
+    opacity: 0.82;
+    border-radius: 14px;
+}
+
+.galeria {
+    margin: 6% 1% 2% 1%;
+    height: 20em;
+    gap: 0.5em;
+    display: flex; 
+}
+
+.galeria a{
+    flex: 0.8; /*Aumenta/diminui o tamanho possível dos retangulos que as imagens ficam*/
+    background-size: cover; /*Aumenata o tamanho possível da imagem*/
+    background-repeat: no-repeat;
+    background-position: center; /*posicionar a imagem (quando ela for background)*/
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275); /*Transição no momento do hover*/
+}
+
+.galeria a:hover {
+    flex: 1.8; /*Aumenta/diminui o tamanho possível dos retangulos que as imagens ficam*/
+}
+
+
+/*Forma de evitar que um elemento sofra alterações mesmo presente naquela class ou tag*/
+.galeria:hover a:not(:hover) {
+    /*filter: grayscale(100%); /*Efeito hover que torna os elemntos cinzas, com exceção do que o mouse está acima*/
+    filter: blur(2px); /*Efeito hover que torna os elementos borrados, com exceção do que o mouse está acima*/
+}
+
+footer {
+    background: #111111;
+    padding: 0.5%;
+}
